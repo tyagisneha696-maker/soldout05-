@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>soldout05 | Men's Fashion</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #111;
+    }
+
+    header {
+      background: #050505;
+      color: white;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+
+    .hero {
+      min-height: 500px;
+      background:
+        linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+        url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1400&q=80")
+        center/cover;
+      display: flex;
+      align-items: center;
+      padding: 40px 7%;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 8vw, 80px);
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: white;
+      color: black;
+      padding: 13px 25px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    section {
+      padding: 55px 6%;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 32px;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .category {
+      background: #111;
+      color: white;
+      padding: 30px 10px;
+      text-align: center;
+      border-radius: 8px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .product {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 3px 12px rgba(0,0,0,.1);
+    }
+
+    .product img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 15px;
+    }
+
+    .product-info h3 {
+      margin-bottom: 8px;
+    }
+
+    .price {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    .order {
+      display: inline-block;
+      background: #111;
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+    }
+
+    .about {
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact a {
+      color: #111;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #050505;
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+
+    @media (max-width: 800px) {
+      nav {
+        display: none;
+      }
+
+      .categories,
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .product img {
+        height: 240px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .categories,
+      .products {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .product img {
+        height: 210px;
+      }
+
+      section {
+        padding: 40px 4%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">SOLDOUT05</div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div>
+    <h1>OWN YOUR STYLE.</h1>
+    <p>Premium men's fashion made for your everyday look.</p>
+    <a href="#shop" class="btn">SHOP NOW</a>
+  </div>
+</section>
+
+<section>
+  <h2 class="title">Shop By Category</h2>
+
+  <div class="categories">
+    <div class="category">T-Shirts</div>
+    <div class="category">Shirts</div>
+    <div class="category">Jeans</div>
+    <div class="category">Joggers</div>
+  </div>
+</section>
+
+<section id="shop">
+  <h2 class="title">New Arrivals</h2>
+
+  <div class="products">
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80">
+      <div class="product-info">
+        <h3>Classic Black T-Shirt</h3>
+        <div class="price">₹699</div>
+        <a class="order" href="https://wa.me/919286497081?text=I%20want%20to%20order%20Classic%20Black%20T-Shirt">
+          Order on WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=600&q=80">
+      <div class="product-info">
+        <h3>Premium Casual Shirt</h3>
+        <div class="price">₹999</div>
+        <a class="order" href="https://wa.me/919286497081?text=I%20want%20to%20order%20Premium%20Casual%20Shirt">
+          Order on WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=600&q=80">
+      <div class="product-info">
+        <h3>Regular Fit Jeans</h3>
+        <div class="price">₹1,299</div>
+        <a class="order" href="https://wa.me/919286497081?text=I%20want%20to%20order%20Regular%20Fit%20Jeans">
+          Order on WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1552902865-b72c031ac5ea?auto=format&fit=crop&w=600&q=80">
+      <div class="product-info">
+        <h3>Comfort Joggers</h3>
+        <div class="price">₹899</div>
+        <a class="order" href="https://wa.me/919286497081?text=I%20want%20to%20order%20Comfort%20Joggers">
+          Order on WhatsApp
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="about" id="about">
+  <h2 class="title">About soldout05</h2>
+
+  <p>
+    soldout05 brings modern men's fashion with premium styles,
+    comfortable fits and affordable prices.
+  </p>
+</section>
+
+<section class="contact" id="contact">
+  <h2 class="title">Contact Us</h2>
+
+  <p>📞 WhatsApp:
+    <a href="https://wa.me/919286497081">9286497081</a>
+  </p>
+
+  <br>
+
+  <p>📧 Email:
+    <a href="mailto:snehatyagi236@gmail.com">
+      snehatyagi236@gmail.com
+    </a>
+  </p>
+
+  <br>
+
+  <p>📍 BB Nagar, Uttar Pradesh, India</p>
+</section>
+
+<footer>
+  <p>© 2026 soldout05. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
